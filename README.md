@@ -1,4 +1,4 @@
-QuickXDev  --ver 3.3
+Base on QuickXDev  --ver 3.3
 =========
 
 Powerful quick-cocos2d-x develop plugin for sublime text 2/3
