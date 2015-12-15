@@ -1,19 +1,14 @@
-Base on QuickXDev  --ver 3.3
+Base on <a href="https://github.com/leitwolf/QuickXDev" target="_blank">QuickXDev  --ver 3.3</a>
 =========
-
-Powerful cocos2d-x develop plugin for sublime text 2/3
-
-CHINESE：<a href="http://my.oschina.net/lonewolf/blog?catalog=412647" target="_blank">http://my.oschina.net/lonewolf/blog?catalog=412647</a>
 
 ## Description
 
-A quick-cocos2d-x develop plugin for sublime text 2/3.
+A cocos2d-x auto complete for sublime text 2/3.
 
 ##Features
 
  * cocos2d-x api completions support
- * goto definition
- * user definition auto completion
+ * lua api auto completion
  * system api completions support (lua 5.1)
  * some snippets,like if-else,if-elseif-else,while,comment,repeat-until....
  * create new lua file with template
