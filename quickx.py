@@ -69,7 +69,7 @@ class LuaNewFileCommand(sublime_plugin.WindowCommand):
             format = settings.get("date_format", "%Y-%m-%d %H:%M:%S")
             date = datetime.datetime.now().strftime(format)
             code = code.replace("${date}", date)
-            author=settings.get("author", "Your Name")
+            author=settings.get("author", "terran")
             code = code.replace("${author}", author)
             # save
             helper.writeFile(filePath, code)
@@ -176,7 +176,7 @@ class QuickxRebuildCocos2dxApiCommand(sublime_plugin.WindowCommand):
         return len(dirs)==1
 
     def is_visible(self, dirs):
-        return self.is_enabled(dirs) and os.path.basename(dirs[0]) == "frameworks"
+        return self.is_enabled(dirs) and os.path.basename(dirs[0]) == "mk_frameworks"
 
 # build file definition when save file
 class QuickxListener(sublime_plugin.EventListener):

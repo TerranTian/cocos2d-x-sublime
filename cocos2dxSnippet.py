@@ -107,7 +107,8 @@ def dealWithFile(filepath):
 	base_name = os.path.basename(filepath)
 	base_name = os.path.splitext(base_name)[0]
 	parent_path = os.path.abspath(os.path.join(output_path,base_name))
-	os.mkdir(parent_path)
+	if(not os.path.exists(parent_path)):
+		os.mkdir(parent_path)
 	
 	readfp = helper.readFile(filepath).splitlines()
 	
@@ -137,7 +138,7 @@ def run(path,outpath):
 
 	apis = helper.getFileList(path,"*/api/*.lua","*/lua_cocos2dx_*.lua");
 	for api in apis:
-		# print(api);
+		print(api);
 		dealWithFile(api)
 	# pass
 	

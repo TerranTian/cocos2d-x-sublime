@@ -70,6 +70,7 @@ def parseLua(file):
     while True:
         line=f.readline()
         if line:
+            line = line.strip();
             lineNum+=1
             # class
             m=re.match("^local\s+(\w+)\s*=\s*\{\}",line)
@@ -103,10 +104,10 @@ def parseLua(file):
                 handleDefinition(m.group(2),m.group(3),file,lineNum,m.group(1)+":"+m.group(2))
                 continue
             # local property
-            m=re.match("^\s*local\s+(\w+)\s*",line)
-            if m:
-                completionsList.append(m.group(1))
-                continue
+            # m=re.match("^\s*local\s+(\w+)\s*",line)
+            # if m:
+            #     completionsList.append(m.group(1))
+            #     continue
             m=re.match("^\s*(self\.\w+)\s*=",line)
             if m:
                 completionsList.append(m.group(1))
